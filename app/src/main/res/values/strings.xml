@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Tic Tac Toe</string>
     <string name="button_text"></string>
+    <string name="reset_button">reset</string>
+    <string name="playerX">Jucator X</string>
+    <string name="player0">Jucator 0</string>
 </resources>

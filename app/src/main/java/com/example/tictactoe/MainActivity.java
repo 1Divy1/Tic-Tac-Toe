@@ -6,11 +6,21 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    // switch between players' turns
-    boolean bPlayerOne;
+    boolean bPlayerOne; // switch between players' turns
+    boolean bAllClicked;
+    boolean bBTN1;
+    boolean bBTN2;
+    boolean bBTN3;
+    boolean bBTN4;
+    boolean bBTN5;
+    boolean bBTN6;
+    boolean bBTN7;
+    boolean bBTN8;
+    boolean bBTN9;
 
     Button btn1;
     Button btn2;
@@ -22,12 +32,26 @@ public class MainActivity extends AppCompatActivity {
     Button btn8;
     Button btn9;
 
+    int player_X_score;
+    int player_0_score;
+
+    TextView playerXScoreText;
+    TextView player0ScoreText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        bPlayerOne = true;
+        player_X_score = 0;
+        player_0_score = 0;
+
+        playerXScoreText = findViewById(R.id.playerXscore);
+        player0ScoreText = findViewById(R.id.player0score);
+        playerXScoreText.setText(String.valueOf(player_X_score));
+        player0ScoreText.setText(String.valueOf(player_0_score));
+        playerXScoreText.setTextSize(30);
+        player0ScoreText.setTextSize(30);
 
         btn1 = findViewById(R.id.button1);
         btn2 = findViewById(R.id.button2);
@@ -38,6 +62,56 @@ public class MainActivity extends AppCompatActivity {
         btn7 = findViewById(R.id.button7);
         btn8 = findViewById(R.id.button8);
         btn9 = findViewById(R.id.button9);
+
+        bPlayerOne = true;
+        bAllClicked = false;
+        bBTN1 = false;
+        bBTN2 = false;
+        bBTN3 = false;
+        bBTN4 = false;
+        bBTN5 = false;
+        bBTN6 = false;
+        bBTN7 = false;
+        bBTN8 = false;
+        bBTN9 = false;
+    }
+
+    public void updatePlayerScore() {
+
+    }
+
+    public void updateBox(int btnID) {
+        if(bPlayerOne == true) {
+            // Fill box with X
+            Log.d("Debug: ", "Box = X");
+            fillBoxX(btnID);
+            bPlayerOne = false;
+        }
+        else if(bPlayerOne == false) {
+            // Fill box with 0
+            Log.d("Debug: ", "Box = 0");
+            fillBox0(btnID);
+            bPlayerOne = true;
+        }
+        checkGameStatus();
+    }
+
+    // change color of the winning boxes
+    public void updateWinBoxesColor() {
+
+    }
+
+    public void resetGame() {
+
+    }
+
+    // responsible for game mechanics
+    public void checkGameStatus() {
+        Log.d("DEBUG: ", "checkGameStatus() called");
+    }
+
+    public void buttonReset(View view) {
+        Log.d("DEBUG: ", "Reset button clicked");
     }
 
     public void fillBoxX(int btnID) {
@@ -121,60 +195,94 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void updateBox(int btnID) {
-        if(bPlayerOne == true) {
-            // Fill box with X
-            Log.d("Debug: ", "Box = X");
-            fillBoxX(btnID);
-            bPlayerOne = false;
-        }
-        else if(bPlayerOne == false) {
-            // Fill box with 0
-            Log.d("Debug: ", "Box = 0");
-            fillBox0(btnID);
-            bPlayerOne = true;
-        }
-    }
-
-    // responsible for game mechanics
-    public void checkGameStatus() {
-
-    }
-
     public void button1(View view) {
-        Log.d("DEBUG: ", "button 1 pressed");
-        updateBox(1);
+        if(bBTN1 != true) {
+            Log.d("DEBUG: ", "button 1 clicked");
+            updateBox(1);
+            bBTN1 = true;
+        }
+        else {
+            Log.d("DEBUG: ", "button 1 already clicked");
+        }
     }
     public void button2(View view) {
-        Log.d("DEBUG: ", "button 2 pressed");
-        updateBox(2);
+        if(bBTN2 != true) {
+            Log.d("DEBUG: ", "button 2 clicked");
+            updateBox(2);
+            bBTN2 = true;
+        }
+        else {
+            Log.d("DEBUG: ", "button 2 already clicked");
+        }
     }
     public void button3(View view) {
-        Log.d("DEBUG: ", "button 3 pressed");
-        updateBox(3);
+        if(bBTN3 != true) {
+            Log.d("DEBUG: ", "button 3 clicked");
+            updateBox(3);
+            bBTN3 = true;
+        }
+        else {
+            Log.d("DEBUG: ", "button 3 already clicked");
+        }
     }
     public void button4(View view) {
-        Log.d("DEBUG: ", "button 4 pressed");
-        updateBox(4);
+        if(bBTN4 != true) {
+            Log.d("DEBUG: ", "button 4 clicked");
+            updateBox(4);
+            bBTN4 = true;
+        }
+        else {
+            Log.d("DEBUG: ", "button 4 already clicked");
+        }
     }
     public void button5(View view) {
-        Log.d("DEBUG: ", "button 5 pressed");
-        updateBox(5);
+        if(bBTN5 != true) {
+            Log.d("DEBUG: ", "button 5 clicked");
+            updateBox(5);
+            bBTN5 = true;
+        }
+        else {
+            Log.d("DEBUG: ", "button 5 already clicked");
+        }
     }
     public void button6(View view) {
-        Log.d("DEBUG: ", "button 6 pressed");
-        updateBox(6);
+        if(bBTN6 != true) {
+            Log.d("DEBUG: ", "button 6 clicked");
+            updateBox(6);
+            bBTN6 = true;
+        }
+        else {
+            Log.d("DEBUG: ", "button 6 already clicked");
+        }
     }
     public void button7(View view) {
-        Log.d("DEBUG: ", "button 7 pressed");
-        updateBox(7);
+        if(bBTN7 != true) {
+            Log.d("DEBUG: ", "button 7 clicked");
+            updateBox(7);
+            bBTN7 = true;
+        }
+        else {
+            Log.d("DEBUG: ", "button 7 already clicked");
+        }
     }
     public void button8(View view) {
-        Log.d("DEBUG: ", "button 8 pressed");
-        updateBox(8);
+        if(bBTN8 != true) {
+            Log.d("DEBUG: ", "button 8 clicked");
+            updateBox(8);
+            bBTN8 = true;
+        }
+        else {
+            Log.d("DEBUG: ", "button 1 already clicked");
+        }
     }
     public void button9(View view) {
-        Log.d("DEBUG: ", "button 9 pressed");
-        updateBox(9);
+        if(bBTN9 != true) {
+            Log.d("DEBUG: ", "button 9 clicked");
+            updateBox(9);
+            bBTN9 = true;
+        }
+        else {
+            Log.d("DEBUG: ", "button 1 already clicked");
+        }
     }
 }
