@@ -2,6 +2,7 @@ package com.example.tictactoe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,15 +13,15 @@ public class MainActivity extends AppCompatActivity {
 
     boolean bPlayerOne; // switch between players' turns
     boolean bAllClicked;
-    boolean bBTN1;
-    boolean bBTN2;
-    boolean bBTN3;
-    boolean bBTN4;
-    boolean bBTN5;
-    boolean bBTN6;
-    boolean bBTN7;
-    boolean bBTN8;
-    boolean bBTN9;
+    boolean bBtn1Clicked;
+    boolean bBtn2Clicked;
+    boolean bBtn3Clicked;
+    boolean bBtn4Clicked;
+    boolean bBtn5Clicked;
+    boolean bBtn6Clicked;
+    boolean bBtn7Clicked;
+    boolean bBtn8Clicked;
+    boolean bBtn9Clicked;
 
     Button btn1;
     Button btn2;
@@ -65,15 +66,15 @@ public class MainActivity extends AppCompatActivity {
 
         bPlayerOne = true;
         bAllClicked = false;
-        bBTN1 = false;
-        bBTN2 = false;
-        bBTN3 = false;
-        bBTN4 = false;
-        bBTN5 = false;
-        bBTN6 = false;
-        bBTN7 = false;
-        bBTN8 = false;
-        bBTN9 = false;
+        bBtn1Clicked = false;
+        bBtn2Clicked = false;
+        bBtn3Clicked = false;
+        bBtn4Clicked = false;
+        bBtn5Clicked = false;
+        bBtn6Clicked = false;
+        bBtn7Clicked = false;
+        bBtn8Clicked = false;
+        bBtn9Clicked = false;
     }
 
     public void updatePlayerScore() {
@@ -101,10 +102,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void resetGame() {
-
-    }
-
     // responsible for game mechanics
     public void checkGameStatus() {
         Log.d("DEBUG: ", "checkGameStatus() called");
@@ -112,6 +109,39 @@ public class MainActivity extends AppCompatActivity {
 
     public void buttonReset(View view) {
         Log.d("DEBUG: ", "Reset button clicked");
+
+        // Change text to empty
+        btn1.setText("");
+        btn2.setText("");
+        btn3.setText("");
+        btn4.setText("");
+        btn5.setText("");
+        btn6.setText("");
+        btn7.setText("");
+        btn8.setText("");
+        btn9.setText("");
+
+        // Change box color to default
+        btn1.setBackgroundColor(Color.parseColor("#FF007BFF"));
+        btn2.setBackgroundColor(Color.parseColor("#FF007BFF"));
+        btn3.setBackgroundColor(Color.parseColor("#FF007BFF"));
+        btn4.setBackgroundColor(Color.parseColor("#FF007BFF"));
+        btn5.setBackgroundColor(Color.parseColor("#FF007BFF"));
+        btn6.setBackgroundColor(Color.parseColor("#FF007BFF"));
+        btn7.setBackgroundColor(Color.parseColor("#FF007BFF"));
+        btn8.setBackgroundColor(Color.parseColor("#FF007BFF"));
+        btn9.setBackgroundColor(Color.parseColor("#FF007BFF"));
+
+        // Set clicked event boolean to false
+        bBtn1Clicked = false;
+        bBtn2Clicked = false;
+        bBtn3Clicked = false;
+        bBtn4Clicked = false;
+        bBtn5Clicked = false;
+        bBtn6Clicked = false;
+        bBtn7Clicked = false;
+        bBtn8Clicked = false;
+        bBtn9Clicked = false;
     }
 
     public void fillBoxX(int btnID) {
@@ -196,93 +226,102 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void button1(View view) {
-        if(bBTN1 != true) {
+        if(bBtn1Clicked != true) {
             Log.d("DEBUG: ", "button 1 clicked");
             updateBox(1);
-            bBTN1 = true;
+            btn1.setBackgroundColor(Color.parseColor("#03e6ff"));
+            bBtn1Clicked = true;
         }
         else {
             Log.d("DEBUG: ", "button 1 already clicked");
         }
     }
     public void button2(View view) {
-        if(bBTN2 != true) {
+        if(bBtn2Clicked != true) {
             Log.d("DEBUG: ", "button 2 clicked");
             updateBox(2);
-            bBTN2 = true;
+            btn2.setBackgroundColor(Color.parseColor("#03e6ff"));
+            bBtn2Clicked = true;
         }
         else {
             Log.d("DEBUG: ", "button 2 already clicked");
         }
     }
     public void button3(View view) {
-        if(bBTN3 != true) {
+        if(bBtn3Clicked != true) {
             Log.d("DEBUG: ", "button 3 clicked");
             updateBox(3);
-            bBTN3 = true;
+            btn3.setBackgroundColor(Color.parseColor("#03e6ff"));
+            bBtn3Clicked = true;
         }
         else {
             Log.d("DEBUG: ", "button 3 already clicked");
         }
     }
     public void button4(View view) {
-        if(bBTN4 != true) {
+        if(bBtn4Clicked != true) {
             Log.d("DEBUG: ", "button 4 clicked");
             updateBox(4);
-            bBTN4 = true;
+            btn4.setBackgroundColor(Color.parseColor("#03e6ff"));
+            bBtn4Clicked = true;
         }
         else {
             Log.d("DEBUG: ", "button 4 already clicked");
         }
     }
     public void button5(View view) {
-        if(bBTN5 != true) {
+        if(bBtn5Clicked != true) {
             Log.d("DEBUG: ", "button 5 clicked");
             updateBox(5);
-            bBTN5 = true;
+            btn5.setBackgroundColor(Color.parseColor("#03e6ff"));
+            bBtn5Clicked = true;
         }
         else {
             Log.d("DEBUG: ", "button 5 already clicked");
         }
     }
     public void button6(View view) {
-        if(bBTN6 != true) {
+        if(bBtn6Clicked != true) {
             Log.d("DEBUG: ", "button 6 clicked");
             updateBox(6);
-            bBTN6 = true;
+            btn6.setBackgroundColor(Color.parseColor("#03e6ff"));
+            bBtn6Clicked = true;
         }
         else {
             Log.d("DEBUG: ", "button 6 already clicked");
         }
     }
     public void button7(View view) {
-        if(bBTN7 != true) {
+        if(bBtn7Clicked != true) {
             Log.d("DEBUG: ", "button 7 clicked");
             updateBox(7);
-            bBTN7 = true;
+            btn7.setBackgroundColor(Color.parseColor("#03e6ff"));
+            bBtn7Clicked = true;
         }
         else {
             Log.d("DEBUG: ", "button 7 already clicked");
         }
     }
     public void button8(View view) {
-        if(bBTN8 != true) {
+        if(bBtn8Clicked != true) {
             Log.d("DEBUG: ", "button 8 clicked");
             updateBox(8);
-            bBTN8 = true;
+            btn8.setBackgroundColor(Color.parseColor("#03e6ff"));
+            bBtn8Clicked = true;
         }
         else {
-            Log.d("DEBUG: ", "button 1 already clicked");
+            Log.d("DEBUG: ", "button 8 already clicked");
         }
     }
     public void button9(View view) {
-        if(bBTN9 != true) {
+        if(bBtn9Clicked != true) {
             Log.d("DEBUG: ", "button 9 clicked");
             updateBox(9);
-            bBTN9 = true;
+            btn9.setBackgroundColor(Color.parseColor("#03e6ff"));
+            bBtn9Clicked = true;
         }
         else {
-            Log.d("DEBUG: ", "button 1 already clicked");
+            Log.d("DEBUG: ", "button 9 already clicked");
         }
     }
 }

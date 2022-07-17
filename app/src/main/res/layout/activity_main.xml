@@ -28,6 +28,7 @@
                 android:layout_margin="3dp"
                 android:layout_weight="1"
                 android:onClick="button1"
+                android:backgroundTint="#007BFF"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <Button
@@ -37,6 +38,7 @@
                 android:layout_margin="3dp"
                 android:layout_weight="1"
                 android:onClick="button2"
+                android:backgroundTint="#007BFF"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <Button
@@ -46,6 +48,7 @@
                 android:layout_margin="3dp"
                 android:layout_weight="1"
                 android:onClick="button3"
+                android:backgroundTint="#007BFF"
                 tools:ignore="SpeakableTextPresentCheck" />
         </TableRow>
 
@@ -60,6 +63,7 @@
                 android:layout_margin="3dp"
                 android:layout_weight="1"
                 android:onClick="button4"
+                android:backgroundTint="#007BFF"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <Button
@@ -69,6 +73,7 @@
                 android:layout_margin="3dp"
                 android:layout_weight="1"
                 android:onClick="button5"
+                android:backgroundTint="#007BFF"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <Button
@@ -78,6 +83,7 @@
                 android:layout_margin="3dp"
                 android:layout_weight="1"
                 android:onClick="button6"
+                android:backgroundTint="#007BFF"
                 tools:ignore="SpeakableTextPresentCheck" />
         </TableRow>
 
@@ -92,6 +98,7 @@
                 android:layout_margin="3dp"
                 android:layout_weight="1"
                 android:onClick="button7"
+                android:backgroundTint="#007BFF"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <Button
@@ -101,6 +108,7 @@
                 android:layout_margin="3dp"
                 android:layout_weight="1"
                 android:onClick="button8"
+                android:backgroundTint="#007BFF"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <Button
@@ -110,6 +118,7 @@
                 android:layout_margin="3dp"
                 android:layout_weight="1"
                 android:onClick="button9"
+                android:backgroundTint="#007BFF"
                 tools:ignore="SpeakableTextPresentCheck" />
 
         </TableRow>
@@ -120,15 +129,15 @@
         android:id="@+id/button"
         android:layout_width="127dp"
         android:layout_height="62dp"
+        android:onClick="buttonReset"
         android:text="@string/reset_button"
         android:textSize="27sp"
-        android:onClick="buttonReset"
+        android:backgroundTint="#0BDD04"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.925" />
+        app:layout_constraintVertical_bias="0.92" />
 
     <TextView
         android:id="@+id/Jucator0TextView"
