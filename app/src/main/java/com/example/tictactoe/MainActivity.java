@@ -301,39 +301,39 @@ public class MainActivity extends AppCompatActivity {
         switch(btnID) {
             case 1:
                 btn1.setText("X");
-                btn1.setTextSize(15);
+                btn1.setTextSize(45);
                 break;
             case 2:
                 btn2.setText("X");
-                btn2.setTextSize(15);
+                btn2.setTextSize(45);
                 break;
             case 3:
                 btn3.setText("X");
-                btn3.setTextSize(15);
+                btn3.setTextSize(45);
                 break;
             case 4:
                 btn4.setText("X");
-                btn4.setTextSize(15);
+                btn4.setTextSize(45);
                 break;
             case 5:
                 btn5.setText("X");
-                btn5.setTextSize(15);
+                btn5.setTextSize(45);
                 break;
             case 6:
                 btn6.setText("X");
-                btn6.setTextSize(15);
+                btn6.setTextSize(45);
                 break;
             case 7:
                 btn7.setText("X");
-                btn7.setTextSize(15);
+                btn7.setTextSize(45);
                 break;
             case 8:
                 btn8.setText("X");
-                btn8.setTextSize(15);
+                btn8.setTextSize(45);
                 break;
             case 9:
                 btn9.setText("X");
-                btn9.setTextSize(15);
+                btn9.setTextSize(45);
                 break;
         }
     }
@@ -341,39 +341,39 @@ public class MainActivity extends AppCompatActivity {
         switch(btnID) {
             case 1:
                 btn1.setText("0");
-                btn1.setTextSize(15);
+                btn1.setTextSize(45);
                 break;
             case 2:
                 btn2.setText("0");
-                btn2.setTextSize(15);
+                btn2.setTextSize(45);
                 break;
             case 3:
                 btn3.setText("0");
-                btn3.setTextSize(15);
+                btn3.setTextSize(45);
                 break;
             case 4:
                 btn4.setText("0");
-                btn4.setTextSize(15);
+                btn4.setTextSize(45);
                 break;
             case 5:
                 btn5.setText("0");
-                btn5.setTextSize(15);
+                btn5.setTextSize(45);
                 break;
             case 6:
                 btn6.setText("0");
-                btn6.setTextSize(15);
+                btn6.setTextSize(45);
                 break;
             case 7:
                 btn7.setText("0");
-                btn7.setTextSize(15);
+                btn7.setTextSize(45);
                 break;
             case 8:
                 btn8.setText("0");
-                btn8.setTextSize(15);
+                btn8.setTextSize(45);
                 break;
             case 9:
                 btn9.setText("0");
-                btn9.setTextSize(15);
+                btn9.setTextSize(45);
                 break;
         }
     }
