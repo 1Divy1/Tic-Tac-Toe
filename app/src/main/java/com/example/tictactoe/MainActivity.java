@@ -77,10 +77,6 @@ public class MainActivity extends AppCompatActivity {
         bBtn9Clicked = false;
     }
 
-    public void updatePlayerScore() {
-
-    }
-
     public void updateBox(int btnID) {
         if(bPlayerOne == true) {
             // Fill box with X
@@ -97,14 +93,21 @@ public class MainActivity extends AppCompatActivity {
         checkGameStatus();
     }
 
-    // change color of the winning boxes
-    public void updateWinBoxesColor() {
-
+    public void disableButtonClick() {
+        Log.d("DEBUG: ", "Click disabled");
+        btn1.setClickable(false);
+        btn2.setClickable(false);
+        btn3.setClickable(false);
+        btn4.setClickable(false);
+        btn5.setClickable(false);
+        btn6.setClickable(false);
+        btn7.setClickable(false);
+        btn8.setClickable(false);
+        btn9.setClickable(false);
     }
 
     // responsible for game mechanics
     public void checkGameStatus() {
-        Log.d("DEBUG: ", "checkGameStatus() called");
 
         ///// HORIZONTAL
         if(btn1.getText() != "" && btn2.getText() != "" && btn3.getText() != "") {
@@ -113,6 +116,15 @@ public class MainActivity extends AppCompatActivity {
                 btn1.setBackgroundColor(Color.parseColor("#07fc03"));
                 btn2.setBackgroundColor(Color.parseColor("#07fc03"));
                 btn3.setBackgroundColor(Color.parseColor("#07fc03"));
+                disableButtonClick();
+                if(btn1.getText().equals("X")) {
+                    player_X_score++;
+                    playerXScoreText.setText(String.valueOf(player_X_score));
+                }
+                else if(btn1.getText().equals("0")) {
+                    player_0_score++;
+                    player0ScoreText.setText(String.valueOf(player_0_score));
+                }
             }
         }
         if(btn4.getText() != "" && btn5.getText() != "" && btn6.getText() != "") {
@@ -121,6 +133,15 @@ public class MainActivity extends AppCompatActivity {
                 btn4.setBackgroundColor(Color.parseColor("#07fc03"));
                 btn5.setBackgroundColor(Color.parseColor("#07fc03"));
                 btn6.setBackgroundColor(Color.parseColor("#07fc03"));
+                disableButtonClick();
+                if(btn4.getText().equals("X")) {
+                    player_X_score++;
+                    playerXScoreText.setText(String.valueOf(player_X_score));
+                }
+                else if(btn4.getText().equals("0")) {
+                    player_0_score++;
+                    player0ScoreText.setText(String.valueOf(player_0_score));
+                }
             }
         }
         if(btn7.getText() != "" && btn8.getText() != "" && btn9.getText() != "") {
@@ -129,6 +150,15 @@ public class MainActivity extends AppCompatActivity {
                 btn7.setBackgroundColor(Color.parseColor("#07fc03"));
                 btn8.setBackgroundColor(Color.parseColor("#07fc03"));
                 btn9.setBackgroundColor(Color.parseColor("#07fc03"));
+                disableButtonClick();
+                if(btn7.getText().equals("X")) {
+                    player_X_score++;
+                    playerXScoreText.setText(String.valueOf(player_X_score));
+                }
+                else if(btn7.getText().equals("0")) {
+                    player_0_score++;
+                    player0ScoreText.setText(String.valueOf(player_0_score));
+                }
             }
         }
         ///// VERTICAL
@@ -138,6 +168,15 @@ public class MainActivity extends AppCompatActivity {
                 btn1.setBackgroundColor(Color.parseColor("#07fc03"));
                 btn4.setBackgroundColor(Color.parseColor("#07fc03"));
                 btn7.setBackgroundColor(Color.parseColor("#07fc03"));
+                disableButtonClick();
+                if(btn1.getText().equals("X")) {
+                    player_X_score++;
+                    playerXScoreText.setText(String.valueOf(player_X_score));
+                }
+                else if(btn1.getText().equals("0")) {
+                    player_0_score++;
+                    player0ScoreText.setText(String.valueOf(player_0_score));
+                }
             }
         }
         if(btn2.getText() != "" && btn5.getText() != "" && btn8.getText() != "") {
@@ -146,6 +185,15 @@ public class MainActivity extends AppCompatActivity {
                 btn2.setBackgroundColor(Color.parseColor("#07fc03"));
                 btn5.setBackgroundColor(Color.parseColor("#07fc03"));
                 btn8.setBackgroundColor(Color.parseColor("#07fc03"));
+                disableButtonClick();
+                if(btn2.getText().equals("X")) {
+                    player_X_score++;
+                    playerXScoreText.setText(String.valueOf(player_X_score));
+                }
+                else if(btn2.getText().equals("0")) {
+                    player_0_score++;
+                    player0ScoreText.setText(String.valueOf(player_0_score));
+                }
             }
         }
         if(btn3.getText() != "" && btn6.getText() != "" && btn9.getText() != "") {
@@ -154,6 +202,15 @@ public class MainActivity extends AppCompatActivity {
                 btn3.setBackgroundColor(Color.parseColor("#07fc03"));
                 btn6.setBackgroundColor(Color.parseColor("#07fc03"));
                 btn9.setBackgroundColor(Color.parseColor("#07fc03"));
+                disableButtonClick();
+                if(btn3.getText().equals("X")) {
+                    player_X_score++;
+                    playerXScoreText.setText(String.valueOf(player_X_score));
+                }
+                else if(btn3.getText().equals("0")) {
+                    player_0_score++;
+                    player0ScoreText.setText(String.valueOf(player_0_score));
+                }
             }
         }
         ///// DIAGONAL
@@ -163,6 +220,15 @@ public class MainActivity extends AppCompatActivity {
                 btn1.setBackgroundColor(Color.parseColor("#07fc03"));
                 btn5.setBackgroundColor(Color.parseColor("#07fc03"));
                 btn9.setBackgroundColor(Color.parseColor("#07fc03"));
+                disableButtonClick();
+                if(btn1.getText().equals("X")) {
+                    player_X_score++;
+                    playerXScoreText.setText(String.valueOf(player_X_score));
+                }
+                else if(btn1.getText().equals("0")) {
+                    player_0_score++;
+                    player0ScoreText.setText(String.valueOf(player_0_score));
+                }
             }
         }
         if(btn7.getText() != "" && btn5.getText() != "" && btn3.getText() != "") {
@@ -171,6 +237,15 @@ public class MainActivity extends AppCompatActivity {
                 btn7.setBackgroundColor(Color.parseColor("#07fc03"));
                 btn5.setBackgroundColor(Color.parseColor("#07fc03"));
                 btn3.setBackgroundColor(Color.parseColor("#07fc03"));
+                disableButtonClick();
+                if(btn7.getText().equals("X")) {
+                    player_X_score++;
+                    playerXScoreText.setText(String.valueOf(player_X_score));
+                }
+                else if(btn7.getText().equals("0")) {
+                    player_0_score++;
+                    player0ScoreText.setText(String.valueOf(player_0_score));
+                }
             }
         }
     }
@@ -210,6 +285,16 @@ public class MainActivity extends AppCompatActivity {
         bBtn7Clicked = false;
         bBtn8Clicked = false;
         bBtn9Clicked = false;
+
+        btn1.setClickable(true);
+        btn2.setClickable(true);
+        btn3.setClickable(true);
+        btn4.setClickable(true);
+        btn5.setClickable(true);
+        btn6.setClickable(true);
+        btn7.setClickable(true);
+        btn8.setClickable(true);
+        btn9.setClickable(true);
     }
 
     public void fillBoxX(int btnID) {
