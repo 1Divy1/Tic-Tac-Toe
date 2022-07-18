@@ -105,6 +105,74 @@ public class MainActivity extends AppCompatActivity {
     // responsible for game mechanics
     public void checkGameStatus() {
         Log.d("DEBUG: ", "checkGameStatus() called");
+
+        ///// HORIZONTAL
+        if(btn1.getText() != "" && btn2.getText() != "" && btn3.getText() != "") {
+            if(btn1.getText() == btn2.getText() && btn1.getText() == btn3.getText()) {
+                Log.d("DEBUG: ", "Game Winned");
+                btn1.setBackgroundColor(Color.parseColor("#07fc03"));
+                btn2.setBackgroundColor(Color.parseColor("#07fc03"));
+                btn3.setBackgroundColor(Color.parseColor("#07fc03"));
+            }
+        }
+        if(btn4.getText() != "" && btn5.getText() != "" && btn6.getText() != "") {
+            if(btn4.getText() == btn5.getText() && btn4.getText() == btn6.getText()) {
+                Log.d("DEBUG: ", "Game Winned");
+                btn4.setBackgroundColor(Color.parseColor("#07fc03"));
+                btn5.setBackgroundColor(Color.parseColor("#07fc03"));
+                btn6.setBackgroundColor(Color.parseColor("#07fc03"));
+            }
+        }
+        if(btn7.getText() != "" && btn8.getText() != "" && btn9.getText() != "") {
+            if(btn7.getText() == btn8.getText() && btn7.getText() == btn9.getText()) {
+                Log.d("DEBUG: ", "Game Winned");
+                btn7.setBackgroundColor(Color.parseColor("#07fc03"));
+                btn8.setBackgroundColor(Color.parseColor("#07fc03"));
+                btn9.setBackgroundColor(Color.parseColor("#07fc03"));
+            }
+        }
+        ///// VERTICAL
+        if(btn1.getText() != "" && btn4.getText() != "" && btn7.getText() != "") {
+            if(btn1.getText() == btn4.getText() && btn1.getText() == btn7.getText()) {
+                Log.d("DEBUG: ", "Game Winned");
+                btn1.setBackgroundColor(Color.parseColor("#07fc03"));
+                btn4.setBackgroundColor(Color.parseColor("#07fc03"));
+                btn7.setBackgroundColor(Color.parseColor("#07fc03"));
+            }
+        }
+        if(btn2.getText() != "" && btn5.getText() != "" && btn8.getText() != "") {
+            if(btn2.getText() == btn5.getText() && btn2.getText() == btn8.getText()) {
+                Log.d("DEBUG: ", "Game Winned");
+                btn2.setBackgroundColor(Color.parseColor("#07fc03"));
+                btn5.setBackgroundColor(Color.parseColor("#07fc03"));
+                btn8.setBackgroundColor(Color.parseColor("#07fc03"));
+            }
+        }
+        if(btn3.getText() != "" && btn6.getText() != "" && btn9.getText() != "") {
+            if(btn3.getText() == btn6.getText() && btn3.getText() == btn9.getText()) {
+                Log.d("DEBUG: ", "Game Winned");
+                btn3.setBackgroundColor(Color.parseColor("#07fc03"));
+                btn6.setBackgroundColor(Color.parseColor("#07fc03"));
+                btn9.setBackgroundColor(Color.parseColor("#07fc03"));
+            }
+        }
+        ///// DIAGONAL
+        if(btn1.getText() != "" && btn5.getText() != "" && btn9.getText() != "") {
+            if(btn1.getText() == btn5.getText() && btn1.getText() == btn9.getText()) {
+                Log.d("DEBUG: ", "Game Winned");
+                btn1.setBackgroundColor(Color.parseColor("#07fc03"));
+                btn5.setBackgroundColor(Color.parseColor("#07fc03"));
+                btn9.setBackgroundColor(Color.parseColor("#07fc03"));
+            }
+        }
+        if(btn7.getText() != "" && btn5.getText() != "" && btn3.getText() != "") {
+            if(btn7.getText() == btn5.getText() && btn7.getText() == btn3.getText()) {
+                Log.d("DEBUG: ", "Game Winned");
+                btn7.setBackgroundColor(Color.parseColor("#07fc03"));
+                btn5.setBackgroundColor(Color.parseColor("#07fc03"));
+                btn3.setBackgroundColor(Color.parseColor("#07fc03"));
+            }
+        }
     }
 
     public void buttonReset(View view) {
@@ -228,8 +296,8 @@ public class MainActivity extends AppCompatActivity {
     public void button1(View view) {
         if(bBtn1Clicked != true) {
             Log.d("DEBUG: ", "button 1 clicked");
-            updateBox(1);
             btn1.setBackgroundColor(Color.parseColor("#03e6ff"));
+            updateBox(1);
             bBtn1Clicked = true;
         }
         else {
@@ -239,8 +307,8 @@ public class MainActivity extends AppCompatActivity {
     public void button2(View view) {
         if(bBtn2Clicked != true) {
             Log.d("DEBUG: ", "button 2 clicked");
-            updateBox(2);
             btn2.setBackgroundColor(Color.parseColor("#03e6ff"));
+            updateBox(2);
             bBtn2Clicked = true;
         }
         else {
@@ -250,8 +318,8 @@ public class MainActivity extends AppCompatActivity {
     public void button3(View view) {
         if(bBtn3Clicked != true) {
             Log.d("DEBUG: ", "button 3 clicked");
-            updateBox(3);
             btn3.setBackgroundColor(Color.parseColor("#03e6ff"));
+            updateBox(3);
             bBtn3Clicked = true;
         }
         else {
@@ -261,8 +329,8 @@ public class MainActivity extends AppCompatActivity {
     public void button4(View view) {
         if(bBtn4Clicked != true) {
             Log.d("DEBUG: ", "button 4 clicked");
-            updateBox(4);
             btn4.setBackgroundColor(Color.parseColor("#03e6ff"));
+            updateBox(4);
             bBtn4Clicked = true;
         }
         else {
@@ -272,8 +340,8 @@ public class MainActivity extends AppCompatActivity {
     public void button5(View view) {
         if(bBtn5Clicked != true) {
             Log.d("DEBUG: ", "button 5 clicked");
-            updateBox(5);
             btn5.setBackgroundColor(Color.parseColor("#03e6ff"));
+            updateBox(5);
             bBtn5Clicked = true;
         }
         else {
@@ -283,8 +351,8 @@ public class MainActivity extends AppCompatActivity {
     public void button6(View view) {
         if(bBtn6Clicked != true) {
             Log.d("DEBUG: ", "button 6 clicked");
-            updateBox(6);
             btn6.setBackgroundColor(Color.parseColor("#03e6ff"));
+            updateBox(6);
             bBtn6Clicked = true;
         }
         else {
@@ -294,8 +362,8 @@ public class MainActivity extends AppCompatActivity {
     public void button7(View view) {
         if(bBtn7Clicked != true) {
             Log.d("DEBUG: ", "button 7 clicked");
-            updateBox(7);
             btn7.setBackgroundColor(Color.parseColor("#03e6ff"));
+            updateBox(7);
             bBtn7Clicked = true;
         }
         else {
@@ -305,8 +373,8 @@ public class MainActivity extends AppCompatActivity {
     public void button8(View view) {
         if(bBtn8Clicked != true) {
             Log.d("DEBUG: ", "button 8 clicked");
-            updateBox(8);
             btn8.setBackgroundColor(Color.parseColor("#03e6ff"));
+            updateBox(8);
             bBtn8Clicked = true;
         }
         else {
@@ -316,8 +384,8 @@ public class MainActivity extends AppCompatActivity {
     public void button9(View view) {
         if(bBtn9Clicked != true) {
             Log.d("DEBUG: ", "button 9 clicked");
-            updateBox(9);
             btn9.setBackgroundColor(Color.parseColor("#03e6ff"));
+            updateBox(9);
             bBtn9Clicked = true;
         }
         else {
